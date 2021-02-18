@@ -1,0 +1,117 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Start of "Micro clearfix" */
+
+        .cf { zoom: 1; }
+        .cf:before, .cf:after { 
+          content: ""; display: table; 
+        }
+        .cf:after { clear: both; }
+
+   /* End of "Micro clearfix" */
+ 
+ /*background-image: url("../img/grid.png");*/
+
+.container{
+  /*width:958px;*/
+  max-width:80vw;
+  /*background: url("../img/grid.png");*/
+  border:1px solid #000;
+  /*margin:10px auto;*/
+  margin:1.043% auto;
+}
+
+header.primary{
+  /*width:938px;*/
+  width:97.912%;
+  background:rgba(0,0,0,.4);
+  /*margin:10px;*/
+  margin:1.043%;
+  /*padding:10px;*/
+  padding:1.066%;
+  float:left;
+}
+
+#content {
+  /*width:543px;*/
+  width:56.680%;
+  background:rgba(0,0,0,.6);
+  /*margin-left:10px;*/
+  margin-left:1.043%;
+  /*padding:10px;*/
+  padding:1.066%;
+  float:left;
+}
+
+aside{
+  /*width:385px;*/
+  width:40.187%;
+  background:rgba(0,0,0,.3);
+  /*margin-left:10px; */
+  margin-left:1.043%;
+  /*padding:10px;*/
+  padding:1.066%;
+  float:left;
+}
+
+footer.primary{
+  /*width:938px;*/
+  width:97.912%;
+  background:rgba(0,0,0,.4);
+  /*margin:10px;*/
+  margin:1.043%;
+  /*padding:10px;*/
+  padding:1.066%;
+  float:left;
+}
+
+.col-3{
+  width:227px;
+  /*width:23.695%;*/
+  background:blue;
+  margin:10px auto;
+  /*margin-left:1.043%;*/
+  padding:10px;
+  /*padding:1.066%;*/
+  float:left;
+}
+
+.col-4{
+  width:306px;
+  /*width:31.941%;*/
+  background:green;
+  margin:10px auto;
+  /*margin-left:1.043%;*/
+  padding:10px;
+  /*padding:1.066%;*/
+  float:left;
+}
+
+.col-6{
+  width:464px;
+  /*width:48.434%;*/
+  background:purple;
+  margin:10px auto;
+  /*margin-left:1.043%;*/
+  padding:10px;
+  /*padding:1.066%;*/
+  float:left; 
+}
+
+.col-12{
+  width:938px;
+  /*width:97.912%;*/
+  background:rgba(0,0,0,.4);
+  margin:10px auto;
+  /*margin:1.043%;*/
+  padding:10px;
+  /*padding:1.066%;*/
+  float:left;
+}
