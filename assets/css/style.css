@@ -1,0 +1,55 @@
+/* apply a natural box layout model to all elements, but allowing components to change 
+
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*Base CSS*/
+body{font-family: 'Droid Serif';background:#374E5A; overflow: auto;}
+
+h1 {
+  color:purple;
+}
+
+.col {
+  width:46%;
+  margin:1%;
+  background:#5a7b6c;
+  border-radius:6px;
+  padding: 2em;
+  float:left;
+}
+
+.col:nth-child(odd){
+  background:#8fb87f;
+}
+
+.col p{
+  color:#fff;
+  text-shadow: 1px 1px #000;
+}
+
+.fancy{display:none;}
+
+/* Max-Width Query*/
+
+@media screen and (max-width:600px){
+  h1 {
+    color:#ffffff;
+    text-shadow: 1px 1px #c0c0c0;
+    background:#000000;
+  }
+}
+
+
+
+
+
+
+
