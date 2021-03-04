@@ -24,7 +24,7 @@
 
 <body>
 
-    <header>
+    <header class="container">
     <!-- Main navigation -->
     <nav class="primary">
       <a href="#about">About</a>
@@ -34,12 +34,13 @@
     </nav>
   </header>
   <!-- Main -->
-  <main itemscope itemtype="http://schema.org/Person">
+  <main itemscope itemtype="http://schema.org/Person" class="container">
     <h1>Anya S. Littlefield</h1>
     <section id="about">
-      <h2>Personal details</h2>
+      <h2 class="visuallyhidden">Personal Details</h2>
       <img itemprop="image" src="img/resume-image.jpg" alt="Anya Littlefield">
-      <p itemprop="description">Statement of Intent</p>
+      <p itemprop="description">Anya Littlefield is a Web Design and Development major at the University
+      of Arkansas at Little Rock.</p>
       <dl>
         <dt>Name</dt>
         <dd itemprop="name">
@@ -53,13 +54,13 @@
         <dd itemprop="homeLocation">Arkansas</dd>
         <dt>Telephone</dt>
         <dd>
-          <a itemprop="telephone" href="tel:555.555.5555">501-339-4194</a>
+          <a itemprop="telephone" href="tel:501-339-4194">501-339-4194</a>
         </dd>
         <dt>Email</dt>
         <dd>
-          <a itemprop="email" href="mailto:email@mail.com">asmakashova@ualr.edu</a>
+          <a itemprop="email" href="mailto:asmakashova@ualr.edu">asmakashova@ualr.edu</a>
         </dd>
-        <dt>4419 Ginger Drive, Benton, AR 72019</dt>
+        <dt>Address</dt>
 
         <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <span itemprop="streetAddress">2801 South University</span>
@@ -127,7 +128,7 @@
     </section>
   </main>
   <!-- Footer -->
-  <footer>
+  <footer class="container">
     <div id="copyright">
       &copy; company. All rights reserved.
     </div>
