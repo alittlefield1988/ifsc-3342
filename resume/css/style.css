@@ -276,6 +276,38 @@ footer{
 }
 
 
+/*----------------------Tablet Breakpoint-----------------------*/
+
+@media screen and (min-width:768px){
+  
+  
+  
+  
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------Edge Case Tweaks-----------------------*/
+
+@media only screen and (max-width: 460px) {
+  .related-links li a svg{display:none;}
+  
+}
+
+
 
 /* ==========================================================================
    Helper classes
