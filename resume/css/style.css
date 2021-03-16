@@ -97,7 +97,7 @@ html {
 
 /*------ Typography ------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 /*------ Fluid Images ------*/
@@ -108,7 +108,7 @@ img {
 
 /* ------ Design Time Styles -------*/
 .container {
-  max-width:480px;
+  max-width:700px;
   margin:0 auto;
 }
 
@@ -252,6 +252,14 @@ dd{
   margin-right:20px;
 }
 
+#skills{
+  
+}
+
+#skills li {
+  list-style-type: square;
+}
+
 .job, .certificate{
   border-bottom:1px solid #999;
   padding-bottom:20px;
@@ -275,29 +283,80 @@ footer{
   padding:20px 0;
 }
 
+/* Reorder Source Using Grid */
 
-/*----------------------Tablet Breakpoint-----------------------*/
+main.container{
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+    "title"
+    "about"
+    "education"
+    "experience"
+    "skills";
+}
 
-@media screen and (min-width:768px){
-  
-  
-  
-  
-  
-  
+.page-title{
+  grid-area: title;
+}
+#about{
+  grid-area: about;
+}
+#skills{
+  grid-area: skills;
+
+}
+#experience{
+  grid-area: experience;
+}
+#education{
+  grid-area: education;
 }
 
 
 
 
+/*----------------------Tablet Breakpoint-----------------------*/
 
-
-
-
-
-
-
-
+@media screen and (min-width:768px){
+  
+  main.container {
+    max-width:900px;
+    grid-template-columns: 35% auto;
+    grid-template-areas:
+      "title title"
+      "about about"
+      "skills education"
+      ". experience";
+  }
+  header.container{
+    max-width:900px;
+  }  
+  
+  /* Nested Grid Example */
+  #about{
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: 300px 1fr auto;
+    grid-template-areas:
+      "details details bio"
+      "related related related"
+  }
+  
+.bio{
+  grid-area:bio;
+}
+.details{
+  grid-area:details;
+}
+  
+.related-links{
+  grid-area:related;
+  border-bottom:1px solid #999;
+  padding-bottom:50px
+}
+  
+}
 
 
 /*----------------------Edge Case Tweaks-----------------------*/

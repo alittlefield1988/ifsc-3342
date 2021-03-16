@@ -18,6 +18,9 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+  
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -25,7 +28,7 @@
 <body>
   
   <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
+  
   <header class="container">
     <!-- Main navigation -->
     <nav class="primary">
@@ -37,13 +40,15 @@
   </header>
   <!-- Main -->
   <main itemscope itemtype="http://schema.org/Person" class="container">
-    <h1>Anya S. Littlefield</h1>
+    <h1 class="page-title">Anya S. Littlefield</h1>
     <section id="about">
       <h2 class="visuallyhidden">Personal Details</h2>
+      <div class="bio">
       <img itemprop="image" src="img/resume-image.jpg" alt="Anya Littlefield">
       <p itemprop="description">Anya Littlefield is a Web Design and Development major at the University
       of Arkansas at Little Rock.</p>
-      <dl>
+      </div>
+      <dl class="details">
         <dt>Name</dt>
         <dd itemprop="name">
           <span itemprop="givenName">Anya</span> <span itemprop="familyName">Littlefield</span>
@@ -73,9 +78,9 @@
 
       </dl>
       <ul class="related-links">
-        <li><a itemprop="url" rel="me" href="https://github.com/profile">github</a></li>
-        <li><a itemprop="url" rel="me" href="http://linkedin.com/profile">linkedin</a></li>
-        <li><a itemprop="url" href="resume.pdf" download><i class="far fa-file-pdf"></i>pdf resume</a></li>
+        <li><a itemprop="url" rel="me" href="https://github.com/profile"> <i class="fab fa-github-square"></i>github</a></li>
+        <li><a itemprop="url" rel="me" href="http://linkedin.com/profile"> <i class="fab fa-linkedin"></i>linkedin</a></li>
+        <li><a itemprop="url" href="resume.pdf" download><i class="fas fa-file-pdf"></i>pdf resume</a></li>
       </ul>
     </section>
     <section id="skills">
