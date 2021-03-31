@@ -147,6 +147,7 @@ nav.primary{
   /*------ Using Repeat Keyword ------*/
   grid-template-columns: repeat(4,1fr);
   padding:20px 20px 0px 20px;
+  justify-content: center;
 }
 
 nav a:link, nav a:visited{
@@ -160,6 +161,8 @@ nav a:link, nav a:visited{
   background:#2E4159;
   transition: background-color .5s ease;
   color:#fff;
+  box-shadow: 0 3px 4px 0 #000000;
+  border-radius: 5px;
 }
 
 nav a:hover{
@@ -178,6 +181,7 @@ main h1 {
   font-weight:400;
   font-variant:small-caps;
 }
+
 main h1:before, main h1:after {
   background-color: #2E4159;
   content: '\a0';
@@ -186,9 +190,11 @@ main h1:before, main h1:after {
   position: relative;
   top: 0.77em;
 }
+
 main h1:before {
   margin-right:10px;
 }
+
 main h1:after {
   margin-left:10px;
 }
@@ -208,14 +214,14 @@ dl {
 dt{
   font-weight:800;
   padding: 10px 0;
-  border-bottom:1px solid #999;
+  border-bottom:1px solid #2E4159;
   grid-column:1;
 }
 
 dd{
   margin: 0;
   padding: 10px 0;
-  border-bottom:1px solid #999;
+  border-bottom:1px solid #2E4159;
   grid-column:2;
 }
 
@@ -252,16 +258,12 @@ dd{
   margin-right:20px;
 }
 
-#skills{
-  
-}
-
 #skills li {
   list-style-type: square;
 }
 
 .job, .certificate{
-  border-bottom:1px solid #999;
+  border-bottom:1px solid #2E4159;
   padding-bottom:20px;
 }
 
@@ -322,39 +324,123 @@ main.container{
   
   main.container {
     max-width:900px;
-    grid-template-columns: 35% auto;
-    grid-template-areas:
-      "title title"
-      "about about"
-      "skills education"
-      ". experience";
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "title title title"
+      "about about about"
+      "education experience skills";
   }
+  
   header.container{
     max-width:900px;
   }  
+  
+  footer.container{
+  max-width:900px;
+}
   
   /* Nested Grid Example */
   #about{
     display:grid;
     grid-gap:2em;
-    grid-template-columns: 300px 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "details details bio"
-      "related related related"
+      "related related related related"
+      "details details details details"
+      ". bio bio ."
   }
   
 .bio{
-  grid-area:bio;
+  grid-area:bio
 }
+
 .details{
   grid-area:details;
+  font-size: 1.5em;
 }
   
 .related-links{
   grid-area:related;
-  border-bottom:1px solid #999;
-  padding-bottom:50px
+  margin: 0;
 }
+
+footer.container{
+  max-width:900px;
+}
+
+img {
+  max-width:100%;
+  height:auto;
+}
+
+.page-title{
+  font-size:4em;
+  margin: 0;
+}
+
+nav a:link, nav a:visited{font-size:1.5em}
+.related-links {font-size: 1.2em}
+
+p[itemprop="description"] {
+  font-size:1.2em;
+}
+
+#education{
+  font-size: 1.2em;
+}
+
+#experience{
+  font-size: 1.2em;
+}
+
+#skills{
+  font-size: 1.2em;
+}
+
+}
+
+/*----------------------Desktop Breakpoint-----------------------*/
+
+@media screen and (min-width:992px){
+  
+  main.container {
+    max-width:1100px;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "title title title"
+      "about about about"
+      "education experience skills";
+  }
+  
+  header.container{
+    max-width:1100px;
+  }  
+  
+  footer.container{
+  max-width:1100px;
+}
+
+  #about{
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". bio bio ."
+      "related related related related"
+      "details details details details"
+      
+  }
+  
+  .bio{
+    display:flex;
+    justify-content:center;
+  }
+  
+  #biopara {
+    padding: 20px;
+  }
   
 }
 
@@ -363,10 +449,26 @@ main.container{
 
 @media only screen and (max-width: 460px) {
   .related-links li a svg{display:none;}
+  .related-links {font-size: .8em}
   
 }
 
+@media only screen and (max-width: 360px) {
+  .related-links li a svg{display:none;}
+  .related-links {font-size: .7em}
+  nav a:link, nav a:visited{font-size:.6em}
 
+}
+
+@media only screen and (max-width: 320px) {
+  .related-links li a svg{display:none;}
+  .related-links {font-size: .7em}
+  nav a:link, nav a:visited{font-size:.5em}
+  body {min-width:320px}
+  h1 {font-size:25px}
+  main.container {padding: 10px}
+
+}
 
 /* ==========================================================================
    Helper classes
