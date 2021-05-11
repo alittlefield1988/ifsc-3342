@@ -285,6 +285,18 @@ nav.footer a:hover{
       ". img3pg1 img3pg1 img3pg1 img3pg1 .";
 }
 
+.wrapper#2 {
+  display:grid;
+  grid-gap: 1em;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-areas:
+      "heading heading heading heading heading heading"
+      "p1 p1 p1 p1 p1 p1"
+      "p2 p2 p2 p2 p2 p2"
+      "img1pg2 img1pg2 img1pg2 img1pg2 img1pg2 img1pg2";
+}
+
 .heading {
   grid-area: heading;
 }
@@ -304,6 +316,27 @@ nav.footer a:hover{
 }
 
 .img3pg1{
+  grid-area: img3pg1;
+  border: 2px solid #04cac4;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.img1pg2{
+  grid-area: img3pg1;
+  border: 2px solid #04cac4;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.img1pg3{
+  grid-area: img3pg1;
+  border: 2px solid #04cac4;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.img1pg4{
   grid-area: img3pg1;
   border: 2px solid #04cac4;
   border-radius: 4px;
@@ -358,10 +391,20 @@ nav.footer a:hover{
   max-width:900px;
   grid-template-columns: repeat(12,1fr);
   grid-template-areas:
-      "heading . . . . . . . . . . ."
+      "heading heading heading . . . . . . . . ."
       "p1 p1 p1 p1 p1 img1pg1 img1pg1 img1pg1 img1pg1 img1pg1 img1pg1 img1pg1"
       "p1 p1 p1 p1 p1 img3pg1 img3pg1 img3pg1 img3pg1 img3pg1 img3pg1 img3pg1"
       "p2 p2 p2 p2 p2 img2pg1 img2pg1 img2pg1 img2pg1 img2pg1 img2pg1 img2pg1";
+}
+
+.wrapper#2 {
+  max-width:900px;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-areas:
+      "heading heading heading . . . . . . . . ."
+      "p1 p1 p1 p1 p1 . img1pg2 img1pg2 img1pg2 img1pg2 img1pg2 img1pg2"
+      "p1 p1 p1 p1 p1 . . . . . . . ."
+      "p2 p2 p2 p2 p2 . . . . . . . .";
 }
 
 main{
@@ -380,7 +423,7 @@ main{
 
 nav.primary{
   display:grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(4,1fr);
   padding:0 20px;
 }
 
@@ -421,9 +464,18 @@ footer.primary {
       "p2 p2 p2 . img3pg1 img3pg1 img3pg1 img3pg1 img2pg1 img2pg1 img2pg1 img2pg1";
 }
 
+.wrapper#2 {
+    max-width:1100px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas:
+      "heading heading heading . . . . . . . . ."
+      "p1 p1 p1 p1 p1 p1 . img1pg2 img1pg2 img1pg2 img1pg2 img1pg2"
+      "p2 p2 p2 . . . . . . . . .";
+}
+
 nav.primary{
   display:grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(4,1fr);
   padding:0 20px;
 }
 
@@ -472,9 +524,18 @@ main{
       "p2 p2 p2 . img3pg1 img3pg1 img3pg1 img3pg1 img2pg1 img2pg1 img2pg1 img2pg1";
 }
 
+.wrapper#2 {
+    max-width:1100px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas:
+      "heading heading heading . . . . . . . . ."
+      "p1 p1 p1 p1 p1 p1 . img1pg2 img1pg2 img1pg2 img1pg2 img1pg2"
+      "p2 p2 p2 . . . . . . . . .";
+}
+
 nav.primary{
   display:grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(4,1fr);
   padding:0 20px;
 }
 
