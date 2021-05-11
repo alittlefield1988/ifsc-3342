@@ -14,6 +14,16 @@
     <meta property="og:description" content="Living sustainably and growing farm fresh food without chemicals or antibiotics">
     <meta property="og:url" content="www.diamondstatehomestead.com/index.html">
     <meta property="og:image" content="">
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJQ7VCDKXG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-TJQ7VCDKXG');
+    </script>
 
     <link href="assets/css/style.css" rel="stylesheet"/>
     <link href="assets/css/normalize.css" rel="stylesheet"/>
@@ -23,10 +33,11 @@
     
     <meta name="theme-color" content="#fafafa">
     
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
 
 <body>
@@ -47,41 +58,21 @@
     <div class="wrapper">
         <h2 class="heading">Welcome</h2>
         
-          <p class="p1">
+          <p itemprop="description" class="p1">
           Thank you for visiting our site! We live in Alexander, Arkansas and run a small homestead with our kids. We are passionate 
           about homesteading and living sustainably and hope to connect with others. We hope to develop this site into a valuable 
           resource for others that are getting started on this way of life! Please check in often to see what's new, or contact us if 
           there is any way we can help you!</p>
           <p class="p2">-Anya & Matt Littlefield</p>
-          <img src="assets/img/snowy-tractors.jpg" alt="Snowy Tractors" class ="img1pg1">
-          <img src="assets/img/friendly-chicken.jpg" alt="Friendly Chicken" class ="img2pg1">
-          <img src="assets/img/kids-snake.jpg" alt="Kids with Snake" class ="img3pg1">
+          <img itemprop="image" src="assets/img/snowy-tractors.jpg" alt="Snowy Tractors" class ="img1pg1"
+            srcset="assets/img/snowy-tractors.jpg 475w,
+                    assets/img/snowy-tractors-small.jpg 390w"
+            sizes="(min-width:1000px) 30vw, 400px;">
+          <img itemprop="image" src="assets/img/friendly-chicken.jpg" alt="Friendly Chicken" class ="img2pg1">
+          <img itemprop="image" src="assets/img/kids-snake.jpg" alt="Kids with Snake" class ="img3pg1">
+          
     </div>
     </section>
-    
-    <!--<section id="content" class="container">
-        <h3>Current Goals</h3>
-          <ul>
-            <li>Improve overall quality of herd through selective breeding</li>
-            <li>Bring in buck with new bloodlines and great conformation</li>
-            <li>Grow doe herd</li>
-            <li>Sell adult does that do not make the cut</li>
-            <li>Keep all paperwork current through KGBA</li>
-          </ul>
-        <h3>Future Goals</h3>
-          <ul>
-            <li>Breed for first generation Kinders using registered Pygmy x Nubian parents</li>
-            <li>Sign up for milk test program to obtain milk stars for does</li>
-            <li>Participate in KGBA sanctioned show</li>
-            <li>Expand pasture area</li>
-          </ul>
-    </section>
-    
-    <section id="additional-elements" class="container">
-        <h3>Resources</h3>
-            <p>For more information about Kinder goats or to become a member, visit the <a href="https://kindergoatbreeders.com">Kinder Goat Breeders Association website</a>.</p>
-            <p>To network with other goat folks or ask questions, check out the <a href="https://www.facebook.com/groups/kinderfolks">Kinder Goat Folks Facebook group</a>!</p>
-    </section>-->
     </main>
     
     <footer class="primary">
@@ -89,6 +80,9 @@
                 <a href="#myanchor">Take Me to the Top</a>
                 <a href="mailto:asmakashova@ualr.edu">Report Technical Issue</a>
             </nav>
+            <ul class="related-links">
+             <li><a itemprop="url" rel="me" href="https://www.facebook.com/LittlefieldFamilyFarm"> <i class="fab fa-facebook-square"></i>Facebook</a></li>
+            </ul>
             <h6>&copy; Diamond State Homestead 2021</h6>
     </footer>
 
